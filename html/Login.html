@@ -1,0 +1,21 @@
+<form name="myForm">
+<div class="panel-body" ng-app="app" ng-controller="loginctrl">    
+    <p>
+        <label>Username</label>
+        <span></span><input type="text" name="username" ng-model="username" required/>
+        <span ng-show="myForm.username.$touched && myForm.username.$invalid"></span>
+    </p>
+    <p>
+        <label>Password</label>
+        <span id="spanPassword"></span><input type="password" name="password" ng-model="password" required/>
+        <span ng-show="myForm.username.$touched && myForm.username.$invalid"></span>
+    </p>
+    <p>
+        <span></span><span></span>
+        <button id="Submit" ng-click="onSubmit(username,password)"  ng-init="status=true">Submit</button>
+    </p>
+    <div ng-hide="status"><label>Login Unsuccessfull</label>
+    </div>
+    </div>
+</form>
+

@@ -1,0 +1,24 @@
+[{
+    "name": "Sara",
+    "age":"18",
+    "gender":"Female",
+    "country":"Indian",
+    "height":"150cms",
+    "password":"1"
+},
+{
+    "name": "Lucy",
+    "age":"38",
+    "gender":"Female",
+    "country":"Austrailia",
+    "height":"160cms",
+    "password":"3"
+},
+{
+    "name": "Ram",
+    "age":"58",
+    "gender":"Male",
+    "country":"Canada",
+    "height":"155cms",
+    "password":"3"
+}]
