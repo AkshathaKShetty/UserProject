@@ -1,0 +1,71 @@
+<head>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<form>
+    <div ng-app="app" ng-controller="loginctrl" class="panel-body" ng-init="showme=true">
+        <div class="panel-body">
+            <div class="row">
+                <!--Checkbox Options-->
+                <div id="sidenav" class="col-md-2">
+                    <p>
+                        <b>Height</b>
+                    </p>
+                    <div ng-repeat="h in heightarray">
+                        <div><input type="checkbox" ng-model="h.on" ng-change="checkHeight()" />{{h.height}}</div>
+                    </div><p></p>
+                    <p><b>Age</b></p>
+                    <div ng-repeat="a in agearray">
+                        <div><input type="checkbox" ng-model="a.on" ng-change="checkAge()" />{{a.age}}</div>
+                    </div>
+                    <p></p><p><b>Country</b></p>
+                    <div ng-repeat="c in countryarray">
+                        <div><input type="checkbox" ng-model="c.on" ng-change="checkCountry()" />{{c.country}}</div>
+                    </div><p></p>
+                </div>
+                <!--Sort Option-->
+                <div id="Sort" class="pull-right">
+                    <p>
+                        <select ng-model="sortColumn">
+                            <option value="" selected disabled>Sort By</option>
+                            <option value="name">Name</option>
+                            <option value="+age">Age Asc</option>
+                            <option value="-age">Age Desc</option>
+                            <option value="+height">Height Asc</option>
+                            <option value="-height">Height Desc</option>
+                        </select>
+                    </p>
+                </div>
+                <!--User Details Table-->
+                <!--<div class="col-md-8">
+                    <p>Welcome {{user}}</p>
+                    <div class=".table-responsive">
+                        <table class=".table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Age</th>
+                                    <th>Gender</th>
+                                    <th>Country</th>
+                                    <th>Height</th>
+                                    <th ng-show="user=='admin'" colspan="3">Modify Table</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="data in users | filter:height |filter:age|filter:country |orderBy:sortColumn">
+                                    <td>{{data.name}}</td>
+                                    <td>{{data.age}}</td>
+                                    <td>{{data.gender}}</td>
+                                    <td>{{data.country}}</td>
+                                    <td>{{data.height}}</td>
+                                    <td ng-show="user=='admin'"><button id="AddRow" ng-click="AddNew(data)">Add</button></td>
+                                    <td ng-show="user=='admin'"><button id="Edit">Add</button>
+                                    <td ng-show="user=='admin'"><button id="Delete">Add</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+</form>
